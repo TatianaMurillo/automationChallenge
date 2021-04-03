@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'karate'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'com.intuit.karate', name: 'karate-junit4', version: '1.0.0'
+    testImplementation group: 'com.intuit.karate', name: 'karate-apache', version: '0.9.6'
+}
+
+sourceSets{
+    test{
+        resources{
+            srcDir file("src/test/java")
+        }
+    }
+}
+
