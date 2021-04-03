@@ -12,5 +12,12 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.2'
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.2'
+
+    testImplementation "net.serenity-bdd:serenity-core:2.0.4"
+    testImplementation "net.serenity-bdd:serenity-junit:2.0.4"
+    testImplementation "junit:junit:4.12"
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
 }
