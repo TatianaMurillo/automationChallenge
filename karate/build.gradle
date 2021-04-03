@@ -12,5 +12,16 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation group: 'com.intuit.karate', name: 'karate-junit4', version: '1.0.0'
+    testImplementation group: 'com.intuit.karate', name: 'karate-apache', version: '0.9.6'
 }
+
+sourceSets{
+    test{
+        resources{
+            srcDir file("src/test/java")
+        }
+    }
+}
+
