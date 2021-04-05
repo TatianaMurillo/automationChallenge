@@ -2,11 +2,13 @@ package stepdefinitions;
 
 
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.questions.Remembered;
 import org.hamcrest.Matchers;
 import tasks.CountCharacters;
@@ -16,11 +18,13 @@ import tasks.GoOverNonExistentPages;
 import utils.Constants;
 import utils.RickAndMortyPaths;
 
-import java.util.Map;
-
 public class ConsumeApisStepDefinitions {
 
+    @Before
+    public void setUp() {
 
+        OnStage.setTheStage(new OnlineCast());
+    }
 
     @Given("^I want to test rick and morty data$")
     public void iWantToTestRickAndMortyData() {
