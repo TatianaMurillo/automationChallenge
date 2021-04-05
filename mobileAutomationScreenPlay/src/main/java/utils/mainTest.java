@@ -14,6 +14,11 @@ public class mainTest  {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
 
 
+        double decimal = 0.000003573;
+
+
+
+
          Object[] list= Class.forName("utils.PIE").getEnumConstants();
 
        double value =  LongitudesConversion.PIE.valueOf("KILOMETERS").value;

@@ -9,6 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
         features="src/test/resources/features/unitConversor.feature",
         glue = "stepdefinitions",
+        tags = {"@Test1"},
         snippets = SnippetType.CAMELCASE
 )
 public class UnitConversor {

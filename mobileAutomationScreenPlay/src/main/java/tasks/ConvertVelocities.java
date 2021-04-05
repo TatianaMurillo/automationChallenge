@@ -7,19 +7,17 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-
 import userinterfaces.ConvertionPage;
-import utils.Longitudes;
-
+import utils.Velocities;
 
 import java.util.Map;
 
 
-public class ConvertLongitudes implements Task {
+public class ConvertVelocities implements Task {
 
     Map<String,String> data;
 
-    public ConvertLongitudes(Map<String,String> data) {
+    public ConvertVelocities(Map<String,String> data) {
         this.data=data;
     }
 
@@ -47,25 +45,26 @@ public class ConvertLongitudes implements Task {
                 EnterValueToConvert.enterValueToConvert(data.get("valueToConvert")));
 
         actor.attemptsTo(
-                CalculateLongitude.calculateLongitude(data.get("originUnitName"),data.get("targetUnitName"),data.get("valueToConvert"))
+                CalculateVelocity.calculateVelocity(data.get("originUnitName"),data.get("targetUnitName"),data.get("valueToConvert"))
         );
+
     }
 
 
-    public static ConvertLongitudes convertLongitudes(Map<String,String> data){
-        return Tasks.instrumented(ConvertLongitudes.class,data);
+    public static ConvertVelocities convertVelocities(Map<String,String> data){
+        return Tasks.instrumented(ConvertVelocities.class,data);
     }
 
     private String getUnitValue(String option) {
 
         try{
             switch (option){
-                case "PIES":
-                    return Longitudes.PIES.getFunctionalName();
-                case "METERS":
-                    return Longitudes.METERS.getFunctionalName();
-                case "KILOMETERS":
-                    return Longitudes.KILOMETERS.getFunctionalName();
+                case "MILIMETROXHORA":
+                    return Velocities.MILIMETROXHORA.getFunctionalName();
+                case "MILLAXMINUTO":
+                    return Velocities.MILLAXMINUTO.getFunctionalName();
+                case "METROXMINUTO":
+                    return Velocities.METROXMINUTO.getFunctionalName();
                 default:
                     throw new ThrowAppExceptions(MessageExceptions.SELECT_CONVERSION_OPTIOM);
             }

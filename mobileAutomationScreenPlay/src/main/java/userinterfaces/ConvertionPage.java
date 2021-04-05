@@ -10,6 +10,7 @@ public class ConvertionPage {
 
     public static final Target UNIT_OPTION=Target.the("Options from the list").locatedBy("//android.widget.TextView[@text='{0}']");
 
+    public static final Target DELETE=Target.the("Boton para borrar").locatedBy("//android.widget.Button[@text='C']");
 
     public static final Target TARGET_VALUE=Target.the("textview with the target conversion").located(By.id("com.ba.universalconverter:id/target_value"));
 

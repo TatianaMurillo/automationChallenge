@@ -10,8 +10,11 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import questions.TheLongitudeConversionValidation;
+import questions.TheVelocityConversionValidation;
+
 
 import tasks.ConvertLongitudes;
+import tasks.ConvertVelocities;
 
 
 import java.util.Map;
@@ -43,7 +46,7 @@ public class UnitConversorStepDefinitions {
 
     @When("^I introduce the values for Velocities$")
     public void iIntroduceTheVelocityValuesInTheApplication(Map<String,String> data) {
-        OnStage.theActorInTheSpotlight().attemptsTo(ConvertLongitudes.convertLongitudes(data));
+        OnStage.theActorInTheSpotlight().attemptsTo(ConvertVelocities.convertVelocities(data));
     }
 
     @When("^I introduce the values for Areas$")
@@ -56,5 +59,9 @@ public class UnitConversorStepDefinitions {
     OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(TheLongitudeConversionValidation.getResult()));
     }
 
+    @Then("^I get the equivalent value for velocity$")
+    public void iGetTheEquivalentValueForVelocity() {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(TheVelocityConversionValidation.getResult()));
+    }
 
 }
