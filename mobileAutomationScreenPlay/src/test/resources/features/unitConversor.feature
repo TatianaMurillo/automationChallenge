@@ -33,11 +33,11 @@ Feature: unit conversor application
     Given I want to convert Area
     When I introduce the values for Areas
       |valueToConvert  |<valueToConvert>      |
-      |originUnitName  |<originUnitName>   |
-      |targetUnitName  |<targetUnitName>       |
-    Then  I get the equivalent value for the target unit
+      |originUnitName  |<originUnitName>      |
+      |targetUnitName  |<targetUnitName>      |
+    Then  I get the equivalent value for area
 
     Examples:
-      |valueToConvert|originUnitName|targetUnitName|
-      |345           |  METERS      |PIES          |
-      |345           |  PIES        |METERS        |
+      |valueToConvert|originUnitName   |targetUnitName|
+      |3             |  ACRE           |HECTARE       |
+      |345           |  SQUARE_METER   |HECTARE       |
