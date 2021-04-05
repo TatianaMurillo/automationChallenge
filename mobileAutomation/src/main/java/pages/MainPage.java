@@ -12,8 +12,8 @@ public class MainPage {
     AndroidDriver driver;
 
     String idSelectUnit="com.ba.universalconverter:id/select_unit_spinner_arrow";
-    String idTargetValue="com.ba.universalconverter:id/target_value_placeholder";
-    String xpathTargetValue="//android.widget.TextView[@resource-id='com.ba.universalconverter:id/target_value_placeholder']";
+    String idTargetValue="com.ba.universalconverter:id/target_value";
+    String xpathTargetValue="//android.widget.TextView[@resource-id='com.ba.universalconverter:id/target_value']";
     String xpathSelectUnitOption="//android.widget.TextView[@text='{0}']";
     String xpathForKeys = "//android.widget.Button[@text='{0}']";
 

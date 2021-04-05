@@ -31,7 +31,7 @@ public class UnitConversorSteps {
 
     @Test
     public void getConvertedValue(){
-        Assert.assertThat(mainPage.getConvertionValue(), CoreMatchers.is("4"));
+        Assert.assertThat(mainPage.getConvertionValue(), CoreMatchers.is("522.7273"));
     }
 
 }
