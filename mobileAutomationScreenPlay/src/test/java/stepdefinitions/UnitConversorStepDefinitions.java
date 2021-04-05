@@ -24,8 +24,6 @@ import java.util.Map;
 public class UnitConversorStepDefinitions {
 
 
-    private Actor user = Actor.named("user");
-
     @Before
     public void setUp() {
 
