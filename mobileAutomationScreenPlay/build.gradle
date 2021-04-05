@@ -1,15 +1,28 @@
-plugins {
-    id 'java'
-}
-
 group 'mobileAutomationScreenPlay'
 version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
 repositories {
-    mavenCentral()
+    jcenter()
 }
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:2.0.70"
+        classpath "gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.8"
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 
 dependencies {
     compile group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.41'
